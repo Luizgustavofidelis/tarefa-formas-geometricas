@@ -1,0 +1,57 @@
+<?php
+
+class cirulo implements interfacegeometrico{
+    private $raio;
+
+    public function GetArea(){
+    $areacirculo = pi() * $this->raio * $this->raio;
+    echo"\na area do circulo é: $areacirculo";
+
+    }
+    public function GetDesenho(){
+        $desenho =
+        "\n\n     xxxxxxxx xx              
+        xxxxx            xxxxx         
+     x x                     xxx       
+   xx                          xxx     
+  xx                             xx    
+ x                                xx   
+xx                                 xx  
+x                                   xx 
+x                                     x 
+x                                     xx
+x                                      x
+x                                      x
+x                                      x
+xx                                     x
+x                                     x
+xx                                    x
+ x                                    x
+ xx                                  xx
+  x                                 x  
+   x                              xx   
+   xx                           xx     
+     xx                     xxxx       
+      xxxxx           xxxxxx           
+         xxxxxxxxxxxxxx                ";
+         echo $desenho;
+    }
+
+    /**
+     * Get the value of raio
+     */
+    public function getRaio()
+    {
+        return $this->raio;
+    }
+
+    /**
+     * Set the value of raio
+     */
+    public function setRaio($raio): self
+    {
+        $this->raio = $raio;
+
+        return $this;
+    }
+}
