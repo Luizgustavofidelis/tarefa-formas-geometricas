@@ -1,0 +1,81 @@
+<?php
+
+require_once("modelo/Iformageometrica.php");
+
+class retangulo implements interfacegeometrico{
+    private $base;
+    private $altura;
+
+    public function GetArea(){
+        $arearetangulo = $this->base * $this->altura;
+        echo"\n a area do retangulo é: $arearetangulo";
+    }
+    public function GetDesenho(){
+        $desenhoretangulo = 
+        "\n\n┌─────────────────────┐
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        │                     │
+        └─────────────────────┘";
+        echo $desenhoretangulo;
+
+    }
+
+    /**
+     * Get the value of base
+     */
+    public function getBase()
+    {
+        return $this->base;
+    }
+
+    /**
+     * Set the value of base
+     */
+    public function setBase($base): self
+    {
+        $this->base = $base;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of altura
+     */
+    public function getAltura()
+    {
+        return $this->altura;
+    }
+
+    /**
+     * Set the value of altura
+     */
+    public function setAltura($altura): self
+    {
+        $this->altura = $altura;
+
+        return $this;
+    }
+}
