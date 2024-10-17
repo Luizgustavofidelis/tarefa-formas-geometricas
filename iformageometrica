@@ -1,0 +1,9 @@
+<?php
+
+interface interfacegeometrico{
+    public function GetArea();
+    public function GetDesenho();
+   
+
+}
+
