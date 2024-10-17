@@ -1,0 +1,60 @@
+<?php
+
+require_once("modelo/Iformageometrica.php");
+
+class quadrado implements interfacegeometrico{
+    private $lado;
+
+    public function GetArea(){
+        $areaquadrado = $this->lado * $this->lado;
+        echo"\na area do quuadrado é: $areaquadrado";
+    }
+    public function GetDesenho(){
+        $desenhoquadrado =
+        "\n\n┌──────────────────────────────────────────────────┐
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       │                                                  │
+       └──────────────────────────────────────────────────┘";
+       echo $desenhoquadrado;
+      
+    }
+
+    /**
+     * Get the value of lado
+     */
+    public function getLado()
+    {
+        return $this->lado;
+    }
+
+    /**
+     * Set the value of lado
+     */
+    public function setLado($lado): self
+    {
+        $this->lado = $lado;
+
+        return $this;
+    }
+}
